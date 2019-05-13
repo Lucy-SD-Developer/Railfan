@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuildActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        app:title="Choose Components" />
+
+    <ImageView
+        android:id="@+id/imgFuel"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/lblBrake"
+        app:layout_constraintEnd_toStartOf="@id/btnMinusFuel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblFuel"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fuel_tender" />
+
+    <ImageView
+        android:id="@+id/imgBrake"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/lblTank"
+        app:layout_constraintEnd_toStartOf="@id/btnMinusBrake"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblBrake"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/break_tender" />
+
+    <ImageView
+        android:id="@+id/imgTank"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintEnd_toStartOf="@id/btnMinusTank"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblTank"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tank_car" />
+
+    <EditText
+        android:id="@+id/txtFuel"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:digits="0123456789"
+        app:layout_constraintBottom_toTopOf="@id/lblBrake"
+        app:layout_constraintEnd_toStartOf="@id/btnPlusFuel"
+        app:layout_constraintStart_toEndOf="@id/btnMinusFuel"
+        app:layout_constraintTop_toBottomOf="@id/lblFuel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtBrake"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:digits="0123456789"
+        app:layout_constraintBottom_toTopOf="@id/lblTank"
+        app:layout_constraintEnd_toStartOf="@id/btnPlusBrake"
+        app:layout_constraintStart_toEndOf="@id/btnMinusBrake"
+        app:layout_constraintTop_toBottomOf="@id/lblBrake"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtTank"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:digits="0123456789"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintEnd_toStartOf="@id/btnPlusTank"
+        app:layout_constraintStart_toEndOf="@id/btnMinusTank"
+        app:layout_constraintTop_toBottomOf="@id/lblTank"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblFuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="70dp"
+        android:text="Fuel Tender"
+        android:textColor="@android:color/primary_text_light"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblBrake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="200dp"
+        android:text="Brake Tender"
+        android:textColor="@android:color/primary_text_light"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblTank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:text="Tank Car"
+        android:textColor="@android:color/primary_text_light"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btnMinusFuel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/lblBrake"
+        app:layout_constraintEnd_toStartOf="@id/txtFuel"
+        app:layout_constraintStart_toEndOf="@id/imgFuel"
+        app:layout_constraintTop_toBottomOf="@id/lblFuel"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/minus" />
+
+    <ImageButton
+        android:id="@+id/btnPlusFuel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/lblBrake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/txtFuel"
+        app:layout_constraintTop_toBottomOf="@id/lblFuel"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/plus" />
+
+    <ImageButton
+        android:id="@+id/btnMinusBrake"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/lblTank"
+        app:layout_constraintEnd_toStartOf="@id/txtBrake"
+        app:layout_constraintStart_toEndOf="@id/imgBrake"
+        app:layout_constraintTop_toBottomOf="@id/lblBrake"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/minus" />
+
+    <ImageButton
+        android:id="@+id/btnPlusBrake"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/lblTank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/txtBrake"
+        app:layout_constraintTop_toBottomOf="@id/lblBrake"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/plus" />
+
+    <ImageButton
+        android:id="@+id/btnMinusTank"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintEnd_toStartOf="@id/txtTank"
+        app:layout_constraintStart_toEndOf="@id/imgTank"
+        app:layout_constraintTop_toBottomOf="@id/lblTank"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/minus" />
+
+    <ImageButton
+        android:id="@+id/btnPlusTank"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/txtTank"
+        app:layout_constraintTop_toBottomOf="@id/lblTank"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/plus" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>
+</layout>

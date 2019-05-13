@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainMapActivity">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="200dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="1.0"
+        tools:context=".TrainMapActivity" />
+
+    <ImageButton
+        android:id="@+id/btnWest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/baseline_arrow_back_black_18dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSouth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCenter"
+        app:layout_constraintTop_toBottomOf="@+id/btnNorth" />
+
+    <ImageButton
+        android:id="@+id/btnNorth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/baseline_arrow_upward_black_18dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnEast"
+        app:layout_constraintStart_toEndOf="@+id/btnWest"
+        app:layout_constraintTop_toBottomOf="@+id/map"
+        app:layout_constraintBottom_toTopOf="@id/btnCenter"/>
+
+    <ImageButton
+        android:id="@+id/btnEast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/baseline_arrow_forward_black_18dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSouth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCenter"
+        app:layout_constraintTop_toBottomOf="@+id/btnNorth" />
+
+    <ImageButton
+        android:id="@+id/btnSouth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/baseline_arrow_downward_black_18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCenter"
+        app:layout_constraintStart_toEndOf="@id/btnWest"
+        app:layout_constraintEnd_toStartOf="@id/btnEast"
+        tools:layout_editor_absoluteX="86dp" />
+
+    <ImageButton
+        android:id="@+id/btnCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_mylocation"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="439dp"
+        app:layout_constraintStart_toEndOf="@id/btnWest"
+        app:layout_constraintEnd_toStartOf="@id/btnEast"
+        app:layout_constraintTop_toBottomOf="@id/btnNorth"
+        app:layout_constraintBottom_toTopOf="@id/btnSouth"/>
+
+
+</android.support.constraint.ConstraintLayout>
+</layout>
